@@ -38,7 +38,9 @@ We apply a **rolling validation** approach using `TimeSeriesSplit`:
 ```python
 tss = TimeSeriesSplit(n_splits=5, test_size=24*365*1, gap=24)
 
-## 🧪 Cross-Validation Strategy
+```
+
+### 🧪 Cross-Validation Strategy
 
 Each fold includes:
 
@@ -46,7 +48,7 @@ Each fold includes:
 - 🔍 Testing on unseen future data  
 - 📉 Evaluation using Root Mean Squared Error (RMSE)
 
-## 🛠️ Model Details
+### 🛠️ Model Details
 
 We use the `XGBRegressor` with the following configuration:
 
@@ -58,7 +60,7 @@ xgb.XGBRegressor(
     early_stopping_rounds=50,
     objective='reg:linear'
 )
-
+```
 
 ## 📈 Results
 
